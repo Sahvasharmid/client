@@ -31,11 +31,10 @@ const App = () => {
     <div>
 
       <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
       <Route path="/product/:slug" element={<ProductDetails />} />
       <Route path="/search" element={<Search />} />
-        <Route path='/register' element={ <Signup
-              
-            /> }></Route>
+        <Route path='/register' element={ <Signup /> }></Route>
         <Route path='/login' element={<Signin></Signin>}
         >  {console.log('Rendering for /login')}</Route>
         <Route path='/dashboard' element={<PrivateRouter></PrivateRouter>}>
@@ -53,7 +52,7 @@ const App = () => {
           </Route>   
      
       <Route path='/categories/:slug' element={<CategoryList></CategoryList>}></Route>
-      <Route path='/' element={<Home></Home>}></Route>
+  
       <Route path='/cart' element={<Cart></Cart>}></Route>
       <Route path='/forgotpassword' element={<Forgotpassword></Forgotpassword>}></Route>
       <Route path='*' element={<PagenotFound></PagenotFound>}></Route>

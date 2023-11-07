@@ -43,7 +43,7 @@ const CreateProducts = () => {
         productData.append("Category", Category);
 
         productData.append("shipping",shipping)
-        const {data} = await axios.post("http://localhost:8080/createproduct",
+        const {data} = await axios.post("https://backendecomapp.onrender.com/createproduct",
           productData
           
         );

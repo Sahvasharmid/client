@@ -37,7 +37,7 @@ getAllCategory()
     e.preventDefault()
     const data={categoryname}
     try {
-      const response = await axios.post("http://localhost:8080/createnew", data);
+      const response = await axios.post("https://backendecomapp.onrender.com/createnew", data);
       console.log(response.data); // Log the response data here
     
       if (response && response.data) {
@@ -54,7 +54,7 @@ getAllCategory()
   }
   const handleDelete=async(id)=>{
     try{
-    const del=await axios.delete(`http://localhost:8080/deletecategory/${id}`);
+    const del=await axios.delete(`https://backendecomapp.onrender.com/deletecategory/${id}`);
     console.log(del)
     getAllCategory()
   }
@@ -76,7 +76,7 @@ const handleUpdate=async(e)=>
 try{
     const data={categoryname:updatedname}
 
-   const res=await axios.put(`http://localhost:8080/updatecategory/${selected._id}`,data)
+   const res=await axios.put(`https://backendecomapp.onrender.com/updatecategory/${selected._id}`,data)
     if(res.data.success){
       console.log("success")
       setSelected(null)

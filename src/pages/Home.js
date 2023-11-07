@@ -177,7 +177,7 @@ catch(err){
 
         <div key={item._id} class="card m-2" style={{width:"18rem"}}>
           <Link to={`/product/${item.slug}`} style={{textDecoration:"none"}}>
-  <img src={`http://localhost:8080/getproductphoto/${item._id}`} class="card-img-top border"    style={{ width: "100%", height: "300px", objectFit: "contain" }} alt={item.name}></img>
+  <img src={`https://backendecomapp.onrender.com/getproductphoto/${item._id}`} class="card-img-top border"    style={{ width: "100%", height: "300px", objectFit: "contain" }} alt={item.name}></img>
  
   <div class="card-body">
 

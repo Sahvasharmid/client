@@ -31,7 +31,7 @@ const App = () => {
     <div>
 
       <Routes>
-      <Route path='/' element={<Home></Home>}></Route>
+      <Route exact path='/client' element={<Home></Home>}></Route>
       <Route path="/product/:slug" element={<ProductDetails />} />
       <Route path="/search" element={<Search />} />
         <Route path='/register' element={ <Signup /> }></Route>

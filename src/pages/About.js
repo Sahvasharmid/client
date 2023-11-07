@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-
+import image from "../images/about.jpeg"
 const About = () => {
   return (
     <Layout title={"About us - Ecommerce app"}>
@@ -8,7 +8,7 @@ const About = () => {
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/images/about.jpeg"
+            src={image}
             alt="aboutus"
             style={{ width: "100%" }}
           />

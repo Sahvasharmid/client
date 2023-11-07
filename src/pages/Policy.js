@@ -5,7 +5,7 @@ const Policy = () => {
   return (
     <Layout title={"Privacy Policy"}>
     
-    <div className="container-fluid">
+    <div className="container-fluid mt-3">
         <div className="container">
         <h3 className="center">Privacy</h3>
 <p>We value the trust you place in us and recognize the importance of secure transactions and information privacy. This Privacy Policy describes how Flipkart Internet Private Limited and its affiliates (collectively “Flipkart, we, our, us”) collect, use, share or otherwise process your personal information through Flipkart website www.flipkart.com, its mobile application, and m-site (hereinafter referred to as the “Platform”).</p>

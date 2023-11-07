@@ -11,7 +11,7 @@ import { Outlet } from "react-router-dom";
   useEffect(() => {
     const authCheck = async () => {
       try{
-      const res = await axios.get("http://localhost:8080/privateroute");
+      const res = await axios.get("https://backendecomapp.onrender.com/privateroute");
        console.log(res.data)
       if (res.data.ok) {
         setOk(true);

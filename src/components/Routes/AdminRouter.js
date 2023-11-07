@@ -9,7 +9,7 @@ const AdminRouter = () => {
     useEffect(()=>{
         const authcheck=async()=>{
            try{
-const res=await axios.get("http://localhost:8080/adminroute")
+const res=await axios.get("https://backendecomapp.onrender.com/adminroute")
 console.log(res)
 if(res.data.ok){
     setOk(true)

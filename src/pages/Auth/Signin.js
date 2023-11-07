@@ -24,7 +24,7 @@ const [auth,setAuth]=useContext(AuthContextProvider)
             
 setAuth({...auth,user:response.data.loginresult,token:response.data.token})
            localStorage.setItem('auth',JSON.stringify(response.data))
-           navigate("/")
+           navigate("/client")
            
           }
           

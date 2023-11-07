@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import  {useSearch} from '../utils/SearchContext'
+import { Link } from "react-router-dom";
 const Search = () => {
   const [values] = useSearch();
   return (
@@ -16,6 +17,7 @@ const Search = () => {
           <div className="d-flex flex-wrap mt-4">
             {values?.results.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }}>
+                  <Link to={`/product/${p.slug}`} style={{textDecoration:"none"}}>
                 <img
                   src={`https://backendecomapp.onrender.com/getproductphoto/${p._id}`}
                   className="card-img-top"
@@ -31,9 +33,8 @@ const Search = () => {
                   <p className="card-text"> $ {p.price}</p>
                   </div>
 
-                  <button class="btn btn-primary ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
                 </div>
+                </Link>
               </div>
             ))}
           </div>

@@ -121,8 +121,7 @@ const Header = () => {
               <li className="nav-item">
            <Badge count={cart?.length} showZero>
            <NavLink to="/cart" className="nav-link underline-animation">
-        
-                 <BsFillCartCheckFill></BsFillCartCheckFill>
+        cart
                 </NavLink>
                 </Badge>
 

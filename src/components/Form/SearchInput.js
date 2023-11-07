@@ -10,7 +10,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/search/${values.keyword}`
+        `https://backendecomapp.onrender.com/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       console.log("values",values)

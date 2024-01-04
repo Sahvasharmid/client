@@ -6,7 +6,7 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from '../components/Prices';
 import axios from 'axios'
 import { useCart } from '../utils/CartContext';
-
+import { Spin } from "antd";
 const Home = () => {
   console.log("Home component rendered"); 
 const navigate=useNavigate()
@@ -165,7 +165,12 @@ catch(err){
           </div>
           <div className="col-md-10">
           <h4 className="text-center">ALL PRODUCTS</h4>
-        
+          {loading && (
+               <div className="text-center mt-3">
+               <Spin size="large" />
+             </div>
+            )
+          }
           <div className='d-flex flex-wrap'>
 
           {products.map((item)=>(<>
@@ -209,7 +214,9 @@ catch(err){
                   e.preventDefault();
                   setPage(page + 1);
                 }}
+                disabled={loading}
               >
+
                 {loading ? "Loading ..." : "Loadmore"}
               </button></p>
             )}
